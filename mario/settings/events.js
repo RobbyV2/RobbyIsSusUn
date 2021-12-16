@@ -1,4 +1,4 @@
-FullScreenMario.prototype.settings.events = {
+FullScreenMario.FullScreenMario.settings.events = {
     "keyOnClassCycleStart": "onThingAdd",
     "keyDoClassCycleStart": "placed",
     "keyCycleCheckValidity": "alive",

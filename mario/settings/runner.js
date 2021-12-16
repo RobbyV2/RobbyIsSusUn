@@ -1,7 +1,9 @@
-FullScreenMario.prototype.settings.runner = {
-    "interval": 1000 / 60,
-    "adjustFramerate": true,
+FullScreenMario.FullScreenMario.settings.runner = {
     "games": [
+        function () {
+            this.DeviceLayer.checkNavigatorGamepads();
+            this.DeviceLayer.activateAllGamepadTriggers();
+        },
         function () {
             this.QuadsKeeper.determineAllQuadrants("Scenery", this.GroupHolder.getSceneryGroup());
             this.QuadsKeeper.determineAllQuadrants("Text", this.GroupHolder.getTextGroup());
@@ -22,9 +24,9 @@ FullScreenMario.prototype.settings.runner = {
         function () {
             this.PixelDrawer.refillGlobalCanvas(this.MapsHandler.getArea().background);
             // this.PixelDrawer.refillQuadrantGroups(
-                // this.QuadsKeeper.getQuadrantRows(),
-                // this.MapsHandler.getArea().background
+            // this.QuadsKeeper.getQuadrantRows(),
+            // this.MapsHandler.getArea().background
             // );
         }
     ]
-}
+};
